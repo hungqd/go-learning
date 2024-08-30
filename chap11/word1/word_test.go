@@ -20,3 +20,16 @@ func TestNonIsPalindrome(t *testing.T) {
 		t.Error(`IsPalindrome("palindrome") = true`)
 	}
 }
+
+func TestFrenchPalindrome(t *testing.T) {
+	if !word.IsPalindrome("été") {
+		t.Error(`IsPalindrome("été") = false`)
+	}
+}
+
+func TestCanalPalindrome(t *testing.T) {
+	input := "A man, a plan, a canal: Panama"
+	if !word.IsPalindrome(input) {
+		t.Errorf(`IsPalindrome(%q) = false`, input)
+	}
+}
